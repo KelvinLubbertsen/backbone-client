@@ -1,0 +1,8 @@
+punt 4
+Met backbone kan er gebruikt gemaakt worden van localstorage, JSON jquery en templates.
+
+punt 5
+Het is een beetje lastig te intregeren als je er weinig ervaring mee hebt. 
+De structuur is best ingewikkeld en er zijn geen duidelijke handleidingen voor te vinden.
+De enige manier om backbone te snappen is om de code te evalueren en te implementeren in het project, met alle fouten van dien, die je naderhand weer moet oplossen.
+
