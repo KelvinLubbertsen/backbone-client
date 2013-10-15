@@ -1,14 +1,18 @@
 (function($) {
 	
 	Table = Backbone.Model.extend({
-		name: null
+		name: null,
+		reserved: false,
+		orders: []
 	});
 	
 	Tables = Backbone.Collection.extend({
 		
 		initialize: function(models, options){
 			this.bind("add", options.view.addTable);
-		}
+		},
+		
+		localStorage: new Backbone.LocalStorage('tables-backbone')
 		
 	});
 	
