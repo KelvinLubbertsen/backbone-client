@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Restaurant</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+	<body>
+		<section id="klant-view" class="view">
+			<a href="#medewerker">Medewerker</a>
+			<h1>Klant</h1>
+			<span id="book-info">Alle tafels zijn nog vrij!</span>
+			<select id="tafels-list">&nbsp;</select>
+			<button id="book-submit">Book!</button>
+			<span id="book-message">&nbsp;</span>
+		</section>
+		
+		<section id="medewerker-view" class="view">
+			<a href="#klant">Klant</a>
+			<h1>Medewerker</h1>
+			<input type="text" id="order-line" /><button id="order-submit">Order!</button>
+			
+			<div id="tafels">
+				
+			</div>
+		</section>
+		
+		<script src="js/jquery.js"></script>
+		<script src="js/underscore.js"></script>
+		<script src="js/backbone.js"></script>
+		
+		<script src="js/collections/tables.js"></script>
+		<script src="js/models/table.js"></script>
+		<script src="js/views/klant-view.js"></script>
+		<script src="js/views/medewerker-view.js"></script>
+		<script src="js/routers/TableRouter.js"></script>
+		
+		<script src="js/app.js"></script>
+		
+	</body>
+</html>
