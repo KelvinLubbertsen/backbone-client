@@ -1,0 +1,28 @@
+body {
+	background-color: #ccc;
+}
+
+section {
+	width: 1000px;
+	min-height: 400px;
+	box-shadow: 1px 1px 1px #444;
+	border: solid 1px black;
+	background-color: white;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.view {
+	display: none;
+}
+
+.tafel {
+	border: solid 1px black;
+	background-color: green;
+}
+.tafel.booked {
+	background-color: red;
+}
+.tafel.selected {
+	outline: solid 5px red;
+}
