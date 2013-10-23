@@ -10,7 +10,6 @@ var app = app || {};
 			app.tables.bind('add', this.update);
 			app.tables.bind('change', this.update);
 			$(this.el).undelegate('#book-submit', 'click');
-			console.log();
 			if(app.tables.length == 0)
 			{
 				//console.log('test');
@@ -42,7 +41,6 @@ var app = app || {};
 		},
 		
 		book: function(data) {
-			console.log(data);
 			var options = $('#tafels-list option');
 			var selectedTable;
 			options.each(function(key, value){
@@ -56,7 +54,6 @@ var app = app || {};
 				}
 			});
 			var table = app.tables.getByName(selectedTable);
-			console.log(table);
 			table[0].set({'reserved': 'true'});
 		},
 		update: function(data) {

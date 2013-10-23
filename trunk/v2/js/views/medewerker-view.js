@@ -9,8 +9,13 @@ var selectedTable = selectedTable || "";
 		
 		initialize: function(){
 			this.model = app.tables;
+			
+			$(this.el).undelegate('#order-submit', 'click');
+			$(this.el).undelegate('.tafel', 'click');
+			
 			app.tables.bind('change', this.update);
 			app.tables.bind('add', this.update);
+			
 		},
 		
 		update: function(){
@@ -19,7 +24,6 @@ var selectedTable = selectedTable || "";
 			app.tables.each(function(value) {
 				var tafel = $('<div>');
 				tafel.addClass('tafel');
-				console.log(value.get('reserved'));
 				if(value.get('reserved') == 'true')
 					tafel.addClass('booked');
 				
@@ -51,7 +55,6 @@ var selectedTable = selectedTable || "";
 		tafelClick: function(data) {
 			var name = $(data.target).attr('id');
 			var table = app.tables.getByName(name);
-			console.log($(data.target));
 			selectedTable = table[0].get('name');
 			this.update();
 		},
@@ -60,9 +63,7 @@ var selectedTable = selectedTable || "";
 			var newOrder = $('#order-line').val();
 			if(selectedTable != "" && newOrder != "")
 			{
-				console.log('test');
 				var table = app.tables.getByName(selectedTable);
-				console.log(table);
 				var orders = table[0].get('orders');
 				orders[orders.length] = newOrder;
 				table[0].set({orders: orders});
