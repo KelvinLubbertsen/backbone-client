@@ -53,7 +53,8 @@ var selectedTable = selectedTable || "";
 		},
 		
 		tafelClick: function(data) {
-			var name = $(data.target).attr('id');
+			var temp = $(data.target).closest('.tafel') ;
+			var name = $(temp).attr('id');
 			var table = app.tables.getByName(name);
 			selectedTable = table[0].get('name');
 			this.update();
