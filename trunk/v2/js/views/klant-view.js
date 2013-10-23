@@ -7,9 +7,10 @@ var app = app || {};
 		el: '#klant-view',
 		
 		initialize: function(){
-			//console.log('init');
 			app.tables.bind('add', this.update);
 			app.tables.bind('change', this.update);
+			$(this.el).undelegate('#book-submit', 'click');
+			console.log();
 			if(app.tables.length == 0)
 			{
 				//console.log('test');
