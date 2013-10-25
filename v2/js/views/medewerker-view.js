@@ -100,3 +100,4 @@ var selectedTable = selectedTable || "";
 		
 	});
 })(jQuery);
+ // Made by Kelvin Lubbertsen s1046292, Roland Bakker s1049882, Marien Pflaum s1049310
